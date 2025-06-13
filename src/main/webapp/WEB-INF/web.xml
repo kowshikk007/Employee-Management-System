@@ -1,0 +1,69 @@
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         id="WebApp_ID" version="3.1">
+
+    <display-name>EmployeeManagementSystem</display-name>
+
+    <!-- Welcome Page -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Employee Servlet -->
+    <servlet>
+        <servlet-name>EmployeeServlet</servlet-name>
+        <servlet-class>com.company.servlets.EmployeeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EmployeeServlet</servlet-name>
+        <url-pattern>/employees</url-pattern>
+    </servlet-mapping>
+
+    <!-- Department Servlet -->
+    <servlet>
+        <servlet-name>DepartmentServlet</servlet-name>
+        <servlet-class>com.company.servlets.DepartmentServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DepartmentServlet</servlet-name>
+        <url-pattern>/departments</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Delete Servlet -->
+    <servlet>
+    	<servlet-name>DeleteEmployeeServlet</servlet-name>
+    	<servlet-class>com.company.servlets.DeleteEmployeeServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+    	<servlet-name>DeleteEmployeeServlet</servlet-name>
+    	<url-pattern>/DeleteEmployee</url-pattern>
+	</servlet-mapping>
+    
+    <!-- Edit Servlet -->
+    <servlet>
+        <servlet-name>EditEmployeeServlet</servlet-name>
+        <servlet-class>com.company.servlets.EditEmployeeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EditEmployeeServlet</servlet-name>
+        <url-pattern>/edit-employee</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Admin Login -->
+    <servlet>
+    	<servlet-name>AdminLoginServlet</servlet-name>
+    	<servlet-class>com.company.servlets.AdminLoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    	<servlet-name>AdminLoginServlet</servlet-name>
+    	<url-pattern>/admin-login</url-pattern>
+	</servlet-mapping>
+    
+
+</web-app>
